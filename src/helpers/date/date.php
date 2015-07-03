@@ -1,4 +1,5 @@
 <?php
+namespace Helpers;
 /**
  * Provides methods useful in formatting dates and date timestamps.
  *

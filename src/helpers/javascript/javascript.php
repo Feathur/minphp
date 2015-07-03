@@ -1,5 +1,5 @@
 <?php
-Loader::load(HELPERDIR . "html" . DS . "html.php");
+namespace Helpers;
 
 /**
  * Javascript Helper, requires Html Helper

@@ -1,5 +1,5 @@
 <?php
-Loader::load(HELPERDIR . "html" . DS . "html.php");
+namespace Helpers;
 
 /**
  * Form helper, requires Html helper

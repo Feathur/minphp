@@ -112,6 +112,10 @@ define("PLUGINDIR", ROOTWEBDIR . "plugins" . DS);
  */
 define("VENDORDIR", ROOTWEBDIR . "vendors" . DS);
 
+/*
+* PHP default file extension.
+*/
+define('EXT', '.php');
 
 // Include core libraries
 include_once LIBDIR . "loader.php";

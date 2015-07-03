@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * Allows statically configured settings to be stored and accessed on a per-use
  * basis. The purpose of this class is to utilize globally set configurations

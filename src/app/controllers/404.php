@@ -6,7 +6,7 @@
  * @subpackage minPHP.app.controllers
  */
 
-class _404 extends AppController {
+class _404 extends \App\AppController {
 
 }
 

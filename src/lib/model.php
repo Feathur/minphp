@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * This class establishes and maintains a connection to a PDO resource, and
  * provides methods for interacting with that resource

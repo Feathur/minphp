@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * This class is invoked by the driver (index.php) and handles dispatching of requests
  * to the proper controller. It extends Controller only so that it can invoke

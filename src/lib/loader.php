@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * Handles the loading of various files and objects
  *
@@ -21,50 +22,37 @@ final class Loader {
 	 * @return boolean True if loaded, false otherwise
 	 */
 	public static function autoload($class) {
-		// Skip namespaces
 		if (strpos($class, "\\") !== false) {
-			return false;
-		}
-		
-		$paths = array(
-			LIBDIR,
-			ROOTWEBDIR . APPDIR,
-			CONTROLLERDIR,
-			MODELDIR,
-			COMPONENTDIR,
-			HELPERDIR
-		);
-		
-		$plugin = null;
-		if (($c = strpos($class, "."))) {
-			$plugin = self::fromCamelCase(substr($class, 0, $c)) . DIRECTORY_SEPARATOR;
-			$class = substr($class, $c+1);
-		}
-		
-		if ($plugin !== null) {
-			$paths = array(
-				PLUGINDIR . $plugin,
-				PLUGINDIR . $plugin . "models" . DIRECTORY_SEPARATOR,
-				PLUGINDIR . $plugin . "controllers" . DIRECTORY_SEPARATOR,
-				PLUGINDIR . $plugin . "components" . DIRECTORY_SEPARATOR,
-				PLUGINDIR . $plugin . "helpers" . DIRECTORY_SEPARATOR
-			);
-		}
-		
-		$class_file = self::fromCamelCase($class);
-		$file_name = $class_file . ".php";
-		
-		foreach ($paths as $path) {
-			if (file_exists($path . $file_name)) {
-				include $path . $file_name;
-				return true;
-			}
-			elseif (file_exists($path . $class_file . DIRECTORY_SEPARATOR . $file_name)) {
-				include $path . $class_file . DIRECTORY_SEPARATOR . $file_name;
-				return true;
+			$sub = false;
+			$path = ROOTWEBDIR;
+			$tree = explode('\\', $class);
+			foreach($tree as $key => $item){
+				if(is_dir($path . strtolower($item) . DS)){
+					$path .= strtolower($item) . DS;
+					if((count($tree) - 1) === $key){
+						$sub = true;
+					}
+				} 
+				
+				if(!is_dir($path . strtolower($item) . DS) || ($sub === true)){
+					if((count($tree) - 1) === $key){
+						if(file_exists($path . $item . EXT)){
+							$path .= $item . EXT;
+							require_once($path);
+							return true;
+						} elseif(file_exists($path . self::fromCamelCase($item) . EXT)){
+							$path .= self::fromCamelCase($item) . EXT;
+							require_once($path);
+							return true;
+						} elseif(file_exists($path . self::toCamelCase($item) . EXT)){
+							$path .= self::toCamelCase($item) . EXT;
+							require_once($path);
+							return true;
+						}
+					}
+				}
 			}
 		}
-
 		return false;
 	}
 	

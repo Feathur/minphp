@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * Provides a set of static methods to aid in the use of multi-language support.
  * Supports the use of multiple simultaneous languages, including a default

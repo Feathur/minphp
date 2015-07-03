@@ -1,4 +1,6 @@
 <?php
+namespace Components;
+
 /**
  * Supplies methods useful in verifying and formatting input data. Provides a
  * number of methods to verify whether the input data is formatted correctly.

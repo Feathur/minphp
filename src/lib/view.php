@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * Allows the creation of views.
  *

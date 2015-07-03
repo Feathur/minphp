@@ -1,4 +1,5 @@
 <?php
+namespace Helpers;
 /**
  * Provides helper methods for creating XML documents from arrays and objects
  * 

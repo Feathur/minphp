@@ -1,2 +1,2 @@
 <?php
-spl_autoload_register(array('Loader', 'autoload'), true, true);
+spl_autoload_register(array('\Lib\Loader', 'autoload'), true, true);

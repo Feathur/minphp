@@ -1,4 +1,8 @@
 <?php
+use \Lib\Dispatcher;
+use \Lib\Configure;
+use \Exception;
+
 /* SVN FILE: $Id$ */
 /**
  * This file transfers control over to the dispatcher which will invoke the

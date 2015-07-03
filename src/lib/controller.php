@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * This class is extended by the various controllers, and makes available
  * methods that allow controllers to interact with views, models, components,

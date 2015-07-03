@@ -1,4 +1,5 @@
 <?php
+namespace Helpers;
 /**
  * Provides helper methods for dealing with HTML content
  * 

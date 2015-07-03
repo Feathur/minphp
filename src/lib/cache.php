@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * Handles writing to and from the cache
  *

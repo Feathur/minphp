@@ -1,4 +1,5 @@
 <?php
+use \Lib\Configure;
 /**
  * Initializes all database profiles, and sets the desired database profile
  * to be the active profile.

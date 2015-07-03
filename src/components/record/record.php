@@ -1,11 +1,12 @@
 <?php
+namespace Components;
 /**
  * General purpose Database access object
  *
  * @package minPHP
  * @subpackage minPHP.components.record
  */
-class Record extends Model {
+class Record extends \Lib\Model {
 	/**
 	 * @var int The number of open parentheses in where statements yet to be applied
 	 */

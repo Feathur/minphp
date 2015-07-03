@@ -1,4 +1,5 @@
 <?php
+use \Lib\Configure;
 /**
  * Sets all core configuration settings used throughout the application
  *

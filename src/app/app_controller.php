@@ -1,9 +1,10 @@
 <?php
+namespace App;
 /**
  * @package minPHP
  * @subpackage minPHP.app
  */
-class AppController extends Controller {
+class AppController extends \Lib\Controller {
 	#
 	# TODO: Define any methods, load any models or components or anything else
 	# here that you would like to be available to all controllers that extend

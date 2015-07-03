@@ -1,4 +1,5 @@
 <?php
+namespace Helpers;
 /**
  * Provides helper methods for dealing with Page Navigation content.
  *
@@ -11,7 +12,6 @@
  * @package minPHP
  * @subpackage minPHP.helpers.pagination
  */
-Loader::load(HELPERDIR . "html" . DS . "html.php");
 
 class Pagination extends Html {
 	/**

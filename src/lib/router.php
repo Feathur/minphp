@@ -1,4 +1,5 @@
 <?php
+namespace Lib;
 /**
  * Handles mapping of URIs from one type to another
  *

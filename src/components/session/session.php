@@ -1,5 +1,7 @@
 <?php
-Loader::load(COMPONENTDIR . "record" . DS . "record.php");
+namespace Components;
+
+use \Lib\Configure;
 Configure::load("session");
 
 /**
@@ -8,7 +10,7 @@ Configure::load("session");
  * @package minPHP
  * @subpage minPHP.components.session
  */
-class Session {
+class Session extends Singleton {
 	private $Record;
 	private $ttl;
 	private $tbl;

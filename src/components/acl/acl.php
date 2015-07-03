@@ -1,5 +1,5 @@
 <?php
-Loader::load(COMPONENTDIR . "record" . DS . "record.php");
+namespace Components;
 
 /**
  * A generic Access Control List Component with inherited permissions based on a
